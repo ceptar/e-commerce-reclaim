@@ -92,7 +92,7 @@ export default function MyOrdersPage() {
                             {"You haven't placed any orders yet"}
                         </div>
                         <CategoryLink
-                            categorySlug="all-products"
+                            categorySlug="aa-all-products"
                             className={styles.startBrowsingLink}
                         >
                             Start Browsing

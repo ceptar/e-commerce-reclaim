@@ -60,16 +60,17 @@ module.exports = {
             plugins: ['@typescript-eslint', 'import'],
             parser: '@typescript-eslint/parser',
             settings: {
-                'import/internal-regex': '^~/',
-                'import/resolver': {
-                    node: {
-                        extensions: ['.ts', '.tsx'],
-                    },
-                    typescript: {
-                        alwaysTryTypes: true,
-                    },
+                'eslint.validate': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact'],
+                'import/parsers': {
+                  '@typescript-eslint/parser': ['.ts', '.tsx']
                 },
-            },
+                'import/resolver': {
+                  'typescript': {
+                    'alwaysTryTypes': true,
+                    'project': './tsconfig.json'
+                  }
+                }
+              },
             extends: [
                 'plugin:@typescript-eslint/recommended',
                 'plugin:import/recommended',

@@ -30,7 +30,7 @@ export default function ThankYouPage() {
                 </>
             )}
 
-            <CategoryLink categorySlug="all-products" className={styles.link}>
+            <CategoryLink categorySlug="aa-all-products" className={styles.link}>
                 Continue Browsing
             </CategoryLink>
         </div>

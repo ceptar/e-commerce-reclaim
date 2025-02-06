@@ -24,7 +24,7 @@ export default function CartPage() {
 
     const { checkout, isCheckoutInProgress } = useCheckout({
         successUrl: '/thank-you',
-        cancelUrl: '/products/all-products',
+        cancelUrl: '/products/aa-all-products',
         onError: handleError,
     });
 

@@ -1,5 +1,6 @@
 import { Tokens } from '@wix/sdk';
-import React, { FC, useMemo } from 'react';
+import * as React from 'react';
+import { FC, useMemo } from 'react';
 import { SWRConfig } from 'swr';
 import { initializeEcomApiAnonymous, initializeEcomApiWithTokens } from './api';
 import { EcomApi } from './types';

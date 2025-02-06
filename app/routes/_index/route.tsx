@@ -1,22 +1,22 @@
 import type { MetaFunction } from '@remix-run/react';
-import { CategoryLink } from '~/src/components/category-link/category-link';
-import { FeaturedProductsSection } from '~/src/components/featured-products-section/featured-products-section';
-import { LabelWithArrow } from '~/src/components/label-with-arrow/label-with-arrow';
-import { BackgroundParallax, FadeIn, FloatIn } from '~/src/components/visual-effects';
+import { CategoryLink } from '../../../src/components/category-link/category-link';
+import { FeaturedProductsSection } from '../../../src/components/featured-products-section/featured-products-section';
+import { LabelWithArrow } from '../../../src/components/label-with-arrow/label-with-arrow';
+import { BackgroundParallax, FadeIn, FloatIn } from '../../../src/components/visual-effects';
 
 export default function HomePage() {
     return (
         <div>
             <div className="heroBanner">
                 <img
-                    src="https://static.wixstatic.com/media/32aab9_2c3c65e142434906992aedb17db53566~mv2.jpg"
+                    src="./banner4fin.webp"
                     className="heroBannerImage"
                     alt=""
                 />
                 <div className="heroBannerOverlay">
                     <div className="heroBannerSubtitle">ReClaim</div>
                     <h1 className="heroBannerTitle">Reuse. Repurpose. Relove.</h1>
-                    <CategoryLink categorySlug="all-products">
+                    <CategoryLink categorySlug="aa-all-products">
                         <LabelWithArrow>Shop Collections</LabelWithArrow>
                     </CategoryLink>
                 </div>
@@ -28,7 +28,7 @@ export default function HomePage() {
                     <div className="textBannerTitle">
                         Essential home collections for sustainable living
                     </div>
-                    <CategoryLink categorySlug="all-products">
+                    <CategoryLink categorySlug="aa-all-products">
                         <LabelWithArrow>Shop Collections</LabelWithArrow>
                     </CategoryLink>
                 </FadeIn>
@@ -84,7 +84,7 @@ export default function HomePage() {
                                 <br /> sustainable living
                             </div>
                         </div>
-                        <CategoryLink categorySlug="all-products">
+                        <CategoryLink categorySlug="aa-all-products">
                             <LabelWithArrow>Buy a gift</LabelWithArrow>
                         </CategoryLink>
                     </div>
@@ -102,30 +102,30 @@ export default function HomePage() {
 }
 
 export const meta: MetaFunction = () => {
-    const title = 'ReClaim: Home Goods Store';
-    const description = 'Essential home products for sustainable living';
+    const title = "ReClaim: Home Goods Store";
+    const description = "Essential home products for sustainable living";
 
     return [
         { title },
         {
-            name: 'description',
+            name: "description",
             content: description,
         },
         {
-            property: 'robots',
-            content: 'index, follow',
+            property: "robots",
+            content: "index, follow",
         },
         {
-            property: 'og:title',
+            property: "og:title",
             content: title,
         },
         {
-            property: 'og:description',
+            property: "og:description",
             content: description,
         },
         {
-            property: 'og:image',
-            content: '/social-media-image.jpg',
+            property: "og:image",
+            content: "/social-media-image.jpg",
         },
     ];
 };

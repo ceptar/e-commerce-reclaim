@@ -105,20 +105,22 @@ export default function ProductsPage() {
                     <nav>
                         <h2 className={styles.sidebarTitle}>Browse by</h2>
                         <ul className={styles.categoryList}>
-                            {allCategories.map((category) => (
-                                <li key={category._id} className={styles.categoryListItem}>
-                                    <CategoryLink
-                                        categorySlug={category.slug!}
-                                        className={({ isActive }) =>
-                                            classNames(styles.categoryLink, {
-                                                [styles.categoryLinkActive]: isActive,
-                                            })
-                                        }
-                                    >
-                                        {category.name}
-                                    </CategoryLink>
-                                </li>
-                            ))}
+                            {[...allCategories]
+                                .sort((a, b) => (a.slug || '').localeCompare(b.slug || ''))
+                                .map((category) => (
+                                    <li key={category._id} className={styles.categoryListItem}>
+                                        <CategoryLink
+                                            categorySlug={category.slug!}
+                                            className={({ isActive }) =>
+                                                classNames(styles.categoryLink, {
+                                                    [styles.categoryLinkActive]: isActive,
+                                                })
+                                            }
+                                        >
+                                            {category.name}
+                                        </CategoryLink>
+                                    </li>
+                                ))}
                         </ul>
 
                         {category.numberOfProducts !== 0 && (
